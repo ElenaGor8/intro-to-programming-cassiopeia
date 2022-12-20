@@ -5,12 +5,13 @@ const copyright = document.createElement('p');
 copyright.innerHTML = `Elena Gornovoy &#169 ${thisYear}`;
 footer.appendChild(copyright);
 
-//List of technical skills
-const skills = ['Javascript', 'HTML', 'CSS'];
-const skillsSection = document.querySelector('#skills');
-const skillsList = skillsSection.querySelector('ul');
+//List of skills
+const skills = ['Javascript', 'HTML', 'CSS', 'Web Analytics', 'Digital Marketing'];
+const skillsSection = document.querySelector('#Skills');
+const skillsList = document.querySelector('#skills_list');
 for(let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
+    skill.classList.add('skill_name')
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }

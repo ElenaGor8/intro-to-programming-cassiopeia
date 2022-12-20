@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About Me</title>
+<title>Elena Gornovoy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/index.css" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<img src="instructions/img/profile-pic.jpg" alt = "photo of Elena" width="200" height="200">
-<section>
-    <h2>About</h2>
-    <p>Hello! I'm Elena Gornovoy. I am a student at the Code The Dream school, learning front end programming.</p>
-</section>
+    <header>
+        <div class="container">
+            <h1>Elena Gornovoy</h1>  
+                <nav class = "nav">
+                     <ul class="menu">
+                        <li class="menuItems"><a href="#about">About</a></li>
+                        <li class="menuItems"><a href="#experience">Experience</a></li>
+                        <li class="menuItems"><a href="#skills">Skills</a></li>
+                        <li class="menuItems"><a href="#connect">Connect</a></li>
+                        <li class="menuItems"><a href="#leaveMessage">Leave a Message</a></li>
+                     </ul>
+                </nav>
+            <section id = "Picture">
+                <img src="instructions/img/profile-pic.jpg" alt = "photo of Elena" width="200" height="200">
+            </section>
+        </div>
+    </header>
 
-<section>
-    <h2>Experience</h2>
-    <p></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem urna, fringilla ut magna ut, 
-    mollis commodo augue.
-    Maecenas sodales nisi sem, at imperdiet turpis tincidunt sed. 
-    Nunc vel eleifend nisl, vulputate consequat mauris. 
-    Donec felis tortor, consequat eget eleifend sit amet, malesuada sed urna.</p>
-</section>
+    <main>
+        <div class="container">
+            <section id = "About">
+                <h2>About</h2>
+                    <p>Hello! I'm Elena Gornovoy. I am a student at the Code The Dream school, learning front end programming.</p>
+            </section>
 
-<section id = "skills">
-<h2>Skills</h2>
-<ul></ul>
-</section>
+            <section id = "Experience">
+                <h2>Experience</h2>
+                    <p>Result-driven professional with experience in driving brand awareness and campaign performance according to customer needs and goals.
+                        Expertise in analyzing customer insights, consumer trends, and marketing practices to build successful strategies.
+                        Fast learner with strong organizational skills and ability to prioritize.</p>
+                <ul role="experience_list">
+                    <li class="job">
+                        <span><strong>Admin</strong> &mdash; Kalmyk Women Abroad </span>
+                        <span class="emphasis">Oct 2016 - Present</span>  
+                    </li>
+                    <li class="job">
+                        <span
+                        ><strong>Account Manager</strong> &mdash; BrideClick Inc. </span>
+                        <span class="emphasis"> Feb 2012 - June 2016</span>
+                    </li>
+                    <li class="job">
+                        <span><strong>Marketing Specialist</strong> &mdash; VIP Trading (Office and Stationary Products)</span>
+                        <span class="emphasis"> May 2009 - Jan 2010</span>
+                    </li>
+                </ul>
+            </section>
 
-<section>
-    <h2>Connect</h2>
-    <ul>
-        <li>email: <a href="mailto:elena.gornovoy@gmail.com">elena.gornovoy@gmail.com</a></li>
-        <li>phone: +1347xxxxxx17</li>
-        <li><a href="https://www.linkedin.com/in/elena-gornovoy/">Linkedin</a></li>
-    </ul>
-</section>
+            <section id = "Skills">
+                <h2>Skills</h2>
+                    <ul id = "skills_list">
+                        <li class = "skill_name"></li>
+                    </ul>
+            </section>
 
-<section>
-    <h2>Leave a Message</h2>
-    <form name="leave_message">
-        <label for="name">Your name:</label>
-        <input type="text" name="name" required=true><br>
-        <label for="email">Your email:</label>
-        <input type="email" name="email" required=true><br>
-        <label for="message">Message:</label>
-        <textarea name="message" required=true></textarea><br>
-        <button type="submit">Submit</button>
-    </form>
-</section>
+            <section id = "Connect">
+                <h2>Connect</h2>
+                <ul>
+                    <li>email: <a href="mailto:elena.gornovoy@gmail.com">elena.gornovoy@gmail.com</a></li>
+                    <li>phone: +1347xxxxxx17</li>
+                    <li><a href="https://www.linkedin.com/in/elena-gornovoy/">Linkedin</a></li>
+                </ul>
+            </section>
 
-<section id="messages">
-    <h2>Messages</h2>
-    <ul id = "message_list"></ul>
-</section>
+            <section id = "Leave_message">
+                <h2>Leave a Message</h2>
+                <form id = "leave_message" action = "index.html" method = "post" name="leave_message">
+                    <label for="name">Your name:</label>
+                    <input type="text" id = "text" name="name" required=true><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id = "email" name="email" required=true><br>
+                    <label for="message">Message:</label>
+                    <textarea id ="message" name="message" required=true></textarea><br>
+                    <button type="submit" id ="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id ="Messages">
+                <h2>Messages</h2>
+                <ul id ="Message_list"></ul>
+            </section>
+        </div>
+    </main>
 
 <footer></footer>
 <script src="js/index.js"></script>
