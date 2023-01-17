@@ -6,10 +6,10 @@ copyright.innerHTML = `Elena Gornovoy &#169 ${thisYear}`;
 footer.appendChild(copyright);
 
 //List of skills
-const skills = ['Javascript', 'HTML', 'CSS', 'Web Analytics', 'Digital Marketing'];
+const skills = ['Digital Marketing', 'Web Analytics','Javascript', 'HTML', 'CSS'];
 const skillsSection = document.querySelector('#Skills');
 const skillsList = document.querySelector('#skills_list');
-for(let i = 0; i < skills.length; i++) {
+for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
     skill.classList.add('skill_name')
     skill.innerText = skills[i];
@@ -28,12 +28,27 @@ messageForm.addEventListener("submit", (event)=> {
         console.log(message);
 
 //display list of messages with hyperlinked names         
-const messageSection = document.getElementById('#messages');
+const messageSection = document.getElementById('#Messages');
 const messageList = document.querySelector('#message_list');
 const newMessage = document.createElement('li');
 newMessage.innerHTML += `<a href = "mailto:${email}"> ${name} </a> <span> ${message} </span>`;
-       
- //create remove button
+      
+//create edit button
+const editButton = document.createElement('button');
+editButton.innerText = 'edit';
+editButton.type = 'button';
+editButton.addEventListener('click', function(event) {
+newMessage.remove();
+//for edit function
+    const nameElement = document.querySelector('[name = name]');
+    nameElement.value = name;
+    const emailElement = document.querySelector('[name = email]');
+    emailElement.value = email;
+    const messageElement = document.querySelector('[name = message]');
+    messageElement.value = message;
+});
+
+//create remove button
 const removeButton = document.createElement('button');
 removeButton.innerText = 'remove';
 removeButton.type = 'button';
@@ -42,25 +57,9 @@ removeButton.addEventListener("click", () => {
     entry.remove();
 });
 
-//create edit button
-const editButton = document.createElement('button');
-     editButton.innerText = 'edit';
-     editButton.type = 'button';
-     editButton.addEventListener('click', function(event) {
-               newMessage.remove();
-    //for edit function
-        const nameElement = document.querySelector('[name = name]');
-        nameElement.value = name;
-        const emailElement = document.querySelector('[name = email]');
-        emailElement.value = email;
-        const messageElement = document.querySelector('[name = message]');
-        messageElement.value = message;
-     });
-
-
+newMessage.appendChild(editButton);
 newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
-newMessage.appendChild(editButton);
 
 messageForm.reset();
 });
