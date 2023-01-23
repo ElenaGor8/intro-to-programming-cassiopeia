@@ -63,3 +63,23 @@ messageList.appendChild(newMessage);
 
 messageForm.reset();
 });
+
+let githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/ElenaGor8/repos');
+githubRequest.send();
+
+githubRequest.addEventListener('load', function() {
+  let repositories = [];
+  repositories = JSON.parse(this.response);
+  console.log(repositories);
+
+  const projectSection = document.querySelector('#projects')
+  const projectList = projectSection.querySelector('ul')
+
+for (let i = 0; i < repositories.length; i++) {
+  let project = document.createElement("li")
+  project.innerHTML = `<a href="${repositories[i].html_url}" target="_blank">${repositories[i].name}</a>`;
+  projectList.appendChild(project);
+}    
+      
+})
