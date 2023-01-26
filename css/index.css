@@ -1,6 +1,5 @@
 * { 
     font-family: 'Red Hat Text', sans-serif;
-    /*box-sizing: border-box;*/
     list-style: none;
 }
 
@@ -8,8 +7,8 @@ body {
     background-color: #f3edede0;
     color:#0b4d67;
     line-height: 1.5;
+    font-size: 1.2em;
     min-height: 100vh;
-    /*flex-direction: column;*/
 }
 
 header {
@@ -26,15 +25,23 @@ header {
 
 h1 {
     color: #f3edede0;
-    font-size: xx-large;
+    font-size: 2.2em;
 }
 
 h2 {
     color:rgb(11, 77, 143);
-    font-size: larger;
+    font-size: 1.8em;
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 8px;
+}
+
+h3 {
+    color:rgb(11, 77, 143);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .name {
@@ -53,9 +60,9 @@ h2 {
 
 .menuItems {
     flex-direction: row;
-    margin: 20px;
+    margin: 0.8em;
     color: #f3edede0;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 ul {
@@ -76,6 +83,8 @@ ul {
     margin: 0 auto;
 }
 
+/*Experience section*/
+
 .emphasis {
     font-style: italic;
     color: #808092;
@@ -93,7 +102,9 @@ ul {
     padding: 1rem;
     margin-bottom: 0.8rem;
 }
-  
+ 
+/* Skills section*/
+
 .skill_name {
     border-radius: 2px;
     border: 2px solid #0072e0;
@@ -104,7 +115,12 @@ ul {
     margin-right: 1rem;
 }
 
-/* your name text area*/
+#projects {
+    color:#0b4d67;
+}
+
+/* Leave a message section*/
+/* Your Name text area*/
 #text {
     color:#55556e;
     font-size: 1em;
@@ -114,7 +130,7 @@ ul {
     display: inline-block;  
     max-width: 100%;
 }
-/* your email text area*/
+/* Your Email text area*/
 #email {
     color:#55556e;
     font-size: 1em;
@@ -125,7 +141,7 @@ ul {
     max-width: 100%;
 }
 
-/*leave a message text area*/
+/*Your Message text area*/
 #message {
     font-size: 1em;
     font-stretch: extra-expanded;
@@ -136,7 +152,7 @@ ul {
     max-width: 100%;
 }
 
-/*submit message button*/
+/*Submit Message button*/
 #submit {
     color:aliceblue;
     background-color:#0072e0; 
@@ -167,12 +183,12 @@ a:link {
 a:hover,
 a:focus {
   opacity: 1;
-  color:rgb(53, 21, 52)
+  color:rgb(69, 2, 67)
 }
 
 footer {
     background-color: #f7f5f9;
-    font-size: 1rem;
+    font-size: 1em;
     padding: 1rem;
     margin: 0 auto;
 }
