@@ -1,58 +1,66 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Elena Gornovoy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/index.css" rel="stylesheet"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
-</head>
-
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elena Gornovoy</title>
+        <link href="css/index.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fcecaecff9.js" crossorigin="anonymous"></script>
+    </head>
+ 
 <body>
-    <header class="main-header">
-        <div class="header-container">
-        <h1 class="name">Elena Gornovoy</h1>
-            <nav class="nav">
-                <ul class="menu" role="list">
-                    <li class="menuItems"><a href="#about">About</a></li>
-                    <li class="menuItems"><a href="#experience">Experience</a></li>
-                    <li class="menuItems"><a href="#skills">Skills</a></li>
-                    <li class="menuItems"><a href="#projects">Projects</a></li>
-                    <li class="menuItems"><a href="#connect">Connect</a></li>
-                    <!--<li class="menuItems"><a href="#leave_message">Leave a Message</a></li>-->
-                </ul>
-            </nav>
+    <header>
+        <div class="main-header">
+            <h1 class="name">Elena Gornovoy</h1>
+                <nav class="nav">
+                    <ul class="menu" role="list">
+                        <li class="menuItems"><a href="#about">About</a></li>
+                        <li class="menuItems"><a href="#experience">Experience</a></li>
+                        <li class="menuItems"><a href="#skills">Skills</a></li>
+                        <li class="menuItems"><a href="#projects">Projects</a></li>
+                        <li class="menuItems"><a href="#connect">Connect</a></li>
+                    </ul>
+                </nav>
         </div>
     </header>
 
     <main>
         <div class="main-container">
-
-            <section id="headshot">
-                <img src="instructions/img/profile-pic.jpg" alt="photo of Elena" width="200" height="200">
-            </section>
-
             <section id="about">
-                <h2>About</h2>
-                    <p>Result-driven digital marketing professional with experience in driving brand awareness and campaign performance according to customer needs and goals.
+                <div class="headshot">
+                    <img src="instructions/img/profile-pic.jpg" alt="photo of Elena" width="200" height="200">
+                </div>
+                <div class="about_me">
+                    <h2>About</h2>
+                    <p> Result-driven digital marketing professional with experience in account management, driving brand awareness and campaign performance according to customer needs and goals.
                         Expertise in analyzing customer insights, consumer trends, and marketing practices to build successful strategies.
-                        Fast learner with strong organizational skills and ability to prioritize.</p>
+                        Fast learner with strong organizational skills and ability to prioritize.<br>
+                        I live in the NC Triangle area and study front-end programming at Code The Dream school.
+                    </p>
+                </div>
             </section>
 
             <section id="experience">
                 <h2>Experience</h2>
                     <ul role="list">
                         <li class="job">
-                            <span><strong>Admin</strong> &mdash; Kalmyk Women Abroad International Community</span>
-                            <span class="emphasis">Oct 2016 - Present</span>  
+                            <span><strong>Student</strong> &mdash; Code The Dream</span>
+                            <span class="emphasis">2022 - Present</span>  
                         </li>
                         <li class="job">
-                            <span
-                            ><strong>Account Manager</strong> &mdash; BrideClick Inc. (Digital Advertising Network)</span>
-                            <span class="emphasis"> Feb 2012 - June 2016</span>
+                            <span><strong>Admin</strong> &mdash; "Kalmyk Women Abroad" Facebook community</span>
+                            <span class="emphasis">2016 - Present</span>  
                         </li>
                         <li class="job">
-                            <span><strong>Marketing Specialist</strong> &mdash; VIP Trading (Wholesale of Office and Stationary Products)</span>
-                            <span class="emphasis"> May 2009 - Jan 2010</span>
+                            <span><strong>Account Manager</strong> &mdash; BrideClick Inc. Digital Advertising Network</span>
+                            <span class="emphasis"> 2012 - 2016</span>
+                        </li>
+                        <li class="job">
+                            <span><strong>Marketing Specialist</strong> &mdash; VIP Trading, Wholesale of Office Stationary</span>
+                            <span class="emphasis"> 2009 - 2010</span>
                         </li>
                     </ul>
             </section>
@@ -65,39 +73,45 @@
             <section id="projects">
                 <h2>Projects</h2>
                     <ul><!-- HTML inserted via JS --></ul>
-              </section>
+            </section>
               
             <section id="connect">
                 <h2>Connect</h2>
-                    <ul role="list">
+                    <ul>
                         <li>email: <a href="mailto:elena.gornovoy@gmail.com">elena.gornovoy@gmail.com</a></li>
                         <li>phone: +1347xxxxxx17 </li>
-                       <!--<li><a href="https://www.linkedin.com/in/elena-gornovoy/">Linkedin</a></li> -->
                     </ul>
             </section>
 
-            <section id="leave_message">
+            <section id="form">
                 <h2>Leave a Message</h2>
                 <form id="leave_message" action="index.html" method="post" name="leave_message">
-                    <label for="name">Your name:</label>
-                    <input type="text" id="text" name="name" required=true><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required=true><br>
-                    <label for="message">Message:</label>
+                    <label for="name">Your name:</label><br>
+                    <input id="text" type="text" name="name" required=true><br>
+                    <label for="email">Email:</label><br>
+                    <input id="email" type="email" name="email" required=true><br>
+                    <label for="message">Message:</label><br>
                     <textarea id="message" name="message" required=true></textarea><br>
-                    <button type="submit" id ="submit">Submit</button>
+                    <button id ="submit" type="submit">Submit</button>
                 </form>
             </section>
 
-            <section id="messages">
-                <h3>Messages</h3>
-                <ul id="message_list"></ul>
+            <section id="messages" style="display: none">
+                <h2>Messages</h2>  
+                <ul id="message_list"></ul> <!--Messages list will populate via Javascript-->
             </section>
         </div>
     </main>
 
-    <footer>
+    <footer id="footer-container">
+        <ul class="social-media">
+            <li><a href="https://github.com/ElenaGor8" target="_blank" title="GitHub">
+                <i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/elena-gornovoy/" target="_blank" title="Linkedin">
+                <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
     </footer>
-    <script src="js/index.js"></script>
+        <script src="js/index.js"></script>
+
 </body>
 </html>
