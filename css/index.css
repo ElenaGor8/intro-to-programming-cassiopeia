@@ -1,68 +1,60 @@
+/*For mobile devices screen size*/
+
 * { 
+    box-sizing: border-box;
     font-family: 'Red Hat Text', sans-serif;
     list-style: none;
 }
 
 body {
-    background-color: #f3edede0;
-    color:#0b4d67;
+    display: flex;
+    flex-direction: column;
+    color:#0b4d8f;
     line-height: 1.5;
-    font-size: 1.2em;
+    font-size: 1.1em;
     min-height: 100vh;
 }
 
-header {
-    padding: 1rem 0;
-    margin: 0 auto;
-    background-color: rgb(11, 77, 143);
+h1 {
+    color: #0b4d8f;
+    font-size: 1.5em;
+    width: 100%;
 }
 
-.header-container {
+h2 {
+    color:#0b4d8f;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main-header {
     display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-transform: uppercase;
     max-width: 1024px;
     width: 90vw;
 }
 
-h1 {
-    color: #f3edede0;
-    font-size: 2.2em;
-}
-
-h2 {
-    color:rgb(11, 77, 143);
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 8px;
-}
-
-h3 {
-    color:rgb(11, 77, 143);
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
 .name {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
 }
 
 .nav {
     display: flex;
-    width: 100%;
-}
-
-.menu {
-  align-items: center;
-  justify-content: right;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
 }
 
 .menuItems {
-    flex-direction: row;
     margin: 0.8em;
-    color: #f3edede0;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    justify-content: center;
 }
 
 ul {
@@ -70,24 +62,40 @@ ul {
 }
 
 .main-container {
-    padding: 1rem 0;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
     max-width: 1024px;
     width: 90vw;
 }
 
+section {
+    margin: 30px 0;
+}
+
+/*About section*/
+#about {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 0;
+}
+
 .headshot {
-    max-width: 100%;
-    display: block;
-    padding: 1rem 0;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 /*Experience section*/
-
 .emphasis {
     font-style: italic;
-    color: #808092;
+    color: #636371;
 }
 
 .strong {
@@ -95,122 +103,228 @@ ul {
 }
 
 .job {
-    background-color: #f7f5f9;
+    background-color: #eceaee;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.8rem;
     margin-bottom: 0.8rem;
 }
  
 /* Skills section*/
-
 .skill_name {
     border-radius: 2px;
-    border: 2px solid #0072e0;
-    color: #0072e0;
+    border: 2px solid #0C74D4;
+    color: #0C74D4;
     display: inline-block;
     padding: 0.5rem 0.75rem;
     margin-bottom: 0.5rem;
     margin-right: 1rem;
 }
 
+/*Projects Section*/
 #projects {
-    color:#0b4d67;
+    color:#0b4d8f;
 }
 
-/* Leave a message section*/
-/* Your Name text area*/
+/* Leave A Message section*/
+form {
+    display: flex;
+    flex-direction: column
+}
+
+#leave_message {
+    margin-top: 1em;
+}
+
+input[name="email"], input[name="name"] {
+        width: 80%;
+        height: 40px;
+}
+
+textarea {
+    width: 80%;
+    height: 80px;
+}
+
+#form input, textarea {
+    line-height: 1;
+}
+
 #text {
     color:#55556e;
     font-size: 1em;
-    font-stretch: extra-expanded;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: inline-block;  
     max-width: 100%;
 }
 /* Your Email text area*/
 #email {
     color:#55556e;
     font-size: 1em;
-    font-stretch: extra-expanded; 
-    margin-top: 10px;
-    margin-bottom: 10px; 
-    display: inline-block;
     max-width: 100%;
 }
 
 /*Your Message text area*/
 #message {
+    color:#55556e;
     font-size: 1em;
-    font-stretch: extra-expanded;
-    margin-top: 10px;
-    margin-bottom: 5px;  
     padding: 10px;
-    display: block;    
     max-width: 100%;
 }
 
 /*Submit Message button*/
 #submit {
     color:aliceblue;
-    background-color:#0072e0; 
+    background-color:#0B4D8F; 
     font-size: 15px;
     font-weight: bold;
-    min-width: 100px;
+    width: 100px;
     padding: 10px;
     border: none;
     margin: 0;
 }
 
+#submit:hover {
+    background-color: #0a83f4;
+    cursor: pointer;
+}
+
+/*Messages section*/
 #message_list {
     display: inline-block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#message_list li{
+    margin-bottom: 0.5em;
+}
+
+span {
+    margin: 0 1rem;
 }
 
 /*edit and remove buttons*/
 button {
-    margin-right: 10px;
+    font-weight: bold;
+    margin-right: 20px;
     padding: 5px;
+    min-width: 100px;
+    cursor: pointer;
 }
 
-a:link { 
+/*Footer*/
+#footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color:#eceaee;
+    font-size: 1em;
+    text-align: center;
+    justify-content: space-around;
+}
+   
+#footer-container p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.social-media li {
+    position: relative;
+    list-style: none;
+    font-size: 2rem;
+    line-height: 10px;
+    margin: 0 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*links*/
+a:link, a:visited { 
     text-decoration: none; 
     color: inherit;
 }
 
-a:hover,
-a:focus {
-  opacity: 1;
-  color:rgb(69, 2, 67)
+a:hover, a:focus {
+  color:#0a83f4;
 }
 
-footer {
-    background-color: #f7f5f9;
-    font-size: 1em;
-    padding: 1rem;
-    margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-    .main-header,
-    .menu {
+/*For tablet size*/
+@media screen and (min-width: 768px) {
+    
+    .main-header {
         display: flex;
         justify-content: center;
-        padding: 0;
-        margin: auto;
+        align-items: center;
     }
+
+    .menu {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;    
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-container {
+        margin-top: 2rem;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+    
+    .headshot {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 1.5rem 0 0;
+        align-items: center;
+    }
+
     .job {
         flex-direction: row;
         justify-content: space-between;
     }
+    
+    input[name="email"], input[name="name"] {
+        width: 40%;
+        height: 40px;
+    }
+
+    textarea {
+        width: 40%;
+        height: 80px;
+
+    }
 }
 
-@media (min-width: 1025px) {
+/*For large screen*/
+@media screen and (min-width: 1025px) {
     .main-header {
+        display: flex;
         flex-direction: row;
+        margin: 0 auto;
+        padding: 1rem 0;
+        text-transform: uppercase;
+        max-width: 1024px;
+        width: 90vw;
     }
+
+    h1 {
+        margin: 0;
+    }  
+ 
     .menu {
         width: 100%;
         max-width: 1150px;
